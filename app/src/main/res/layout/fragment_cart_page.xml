@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.CartPageFragment">
+
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="29dp"
+        android:text="Danh sách sách mà bạn đã thêm vào giỏ hàng"
+        android:layout_alignParentTop="true"
+        android:background="@color/title_below_header"
+        android:gravity="center"
+        android:textSize="16sp"
+        />
+
+    <LinearLayout
+        android:id="@+id/introduce_main"
+        android:layout_width="match_parent"
+        android:layout_height="515dp"
+        android:layout_below="@+id/title"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/introduce_book1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:src="@drawable/book1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:text="RACHEL TIMOTHY"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="410.000 VNĐ"
+                    android:textColor="@color/green" />
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/alata"
+                    android:text="OPEN BLIND EYES" />
+
+            </LinearLayout>
+
+            <CheckBox
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/introduce_book3"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:src="@drawable/book1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:text="RACHEL TIMOTHY"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="410.000 VNĐ"
+                    android:textColor="@color/green" />
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/alata"
+                    android:text="OPEN BLIND EYES" />
+
+            </LinearLayout>
+
+            <CheckBox
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/introduce_book4"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:src="@drawable/book1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:text="RACHEL TIMOTHY"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="410.000 VNĐ"
+                    android:textColor="@color/green" />
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/alata"
+                    android:text="OPEN BLIND EYES" />
+
+            </LinearLayout>
+
+            <CheckBox
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/introduce_book6"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:src="@drawable/book1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:text="RACHEL TIMOTHY"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="410.000 VNĐ"
+                    android:textColor="@color/green" />
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/alata"
+                    android:text="OPEN BLIND EYES" />
+
+            </LinearLayout>
+
+            <CheckBox
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/introduce_book7"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:src="@drawable/book1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:text="RACHEL TIMOTHY"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="410.000 VNĐ"
+                    android:textColor="@color/green" />
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/alata"
+                    android:text="OPEN BLIND EYES" />
+
+            </LinearLayout>
+
+            <CheckBox
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_below="@+id/introduce_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_blue"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:weightSum="4">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Tổng thanh toán "
+                android:fontFamily="@font/alata"
+                android:textSize="16sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="410.000 VNĐ"
+                android:textColor="@color/green"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/text_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tất cả"
+                    android:layout_marginLeft="135dp"/>
+                <CheckBox
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+            <Button
+                android:id="@+id/btn_paynow"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/resulft_receipt"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="60dp"
+                android:backgroundTint="@color/button"
+                android:text="Thanh toán" />
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</RelativeLayout>
