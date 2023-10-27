@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".fragments.PaySuccessPageFragment">
+
+    <ImageView
+        android:id="@+id/image_pos"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/pay_success"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="THANH TOÁN THÀNH CÔNG"
+        android:fontFamily="@font/alata_bold"
+        android:textColor="@color/green"
+        android:textSize="30sp"
+        android:layout_below="@id/image_pos"
+        android:layout_gravity="center"
+        />
+    <Button
+        android:id="@+id/btn_backHome"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/resulft_receipt"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/button"
+        android:text="Trang chủ" />
+
+</LinearLayout>

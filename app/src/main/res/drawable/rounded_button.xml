@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="25dp" /> <!-- Điều này làm cho góc tròn, điều chỉnh giá trị bên trong radius theo ý muốn của bạn -->
+    <solid android:color="#95E1F1" /> <!-- Màu nền của nút -->
+</shape>

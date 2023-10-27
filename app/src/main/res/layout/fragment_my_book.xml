@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToOutline="true"
+    android:background="#FFFFFF">
+    <!-- Auto layout, variables, and unit scale are not yet supported -->
+    <View
+        android:id="@+id/rectangle_7"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentTop="true"
+        android:background="#3EAEF4"
+        />
+    <TextView
+        android:id="@+id/s_ch_c_a_t_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Sách của tôi"
+        android:fontFamily="@font/roboto_medium"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        />
+    <ImageButton
+        android:id="@+id/mdi_arrow_l"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/mdi_arrow_left"/>
+    <ImageButton
+        android:id="@+id/mdi_share_v"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/mdi_share_variant_outline"/>
+
+    <ListView
+        android:id="@+id/lvLibrary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rectangle_7"
+        android:layout_marginBottom="20dp"/>
+</RelativeLayout>
