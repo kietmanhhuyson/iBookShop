@@ -5,11 +5,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+
 import com.ibookshop.R;
+import com.ibookshop.fragments.ReadFragment;
 
 import java.util.List;
 
@@ -55,7 +61,7 @@ public class LibraryAdapter extends BaseAdapter {
             viewHolder.txtNgayPhatHanh = convertView.findViewById(R.id.ngayPhatHanh);
             viewHolder.txtPhanTram = convertView.findViewById(R.id.phanTram);
             viewHolder.progressBar = convertView.findViewById(R.id.customProgressBar);
-
+            viewHolder.button = convertView.findViewById(R.id.button);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
@@ -69,7 +75,19 @@ public class LibraryAdapter extends BaseAdapter {
         viewHolder.txtNgayPhatHanh.setText(String.valueOf(book.getNgayPhatHanh()));
         viewHolder.txtPhanTram.setText(String.valueOf(book.getPhantramDoc()));
         viewHolder.progressBar.setProgress(book.getPhantramDoc());
-
+        viewHolder.button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (book.getTenSach().equals("OPEN BLIND EYES")){
+                    ReadFragment readFragment = new ReadFragment();
+                    FragmentManager fragmentManager = ((AppCompatActivity) context).getSupportFragmentManager();
+                    fragmentManager.beginTransaction()
+                            .replace(R.id.fragment_container, readFragment) // Thay "R.id.fragment_container" bằng ID của container fragment của bạn.
+                            .addToBackStack(null) // Thêm fragment hiện tại vào back stack để có thể quay lại sau này.
+                            .commit();
+                }
+            }
+        });
         return convertView;
     }
 
@@ -80,6 +98,7 @@ public class LibraryAdapter extends BaseAdapter {
         TextView txtSoTrang;
         TextView txtNgayPhatHanh;
         TextView txtPhanTram;
+        Button button;
         ProgressBar progressBar;
     }
 }
