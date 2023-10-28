@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import androidx.annotation.NonNull;
@@ -23,6 +24,7 @@ public class myBookFragment extends Fragment {
     ListView lvBook;
     ArrayList<Book> arrayBook;
     LibraryAdapter adapter;
+    ImageButton imgbtn;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -30,10 +32,17 @@ public class myBookFragment extends Fragment {
         AnhXa(view);
         adapter = new LibraryAdapter(getActivity(),R.layout.item_library,arrayBook);
         lvBook.setAdapter(adapter);
+        imgbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new mainPageFragment()).commit();
+            }
+        });
         return view;
     }
     private void AnhXa(View view){
         lvBook = (ListView) view.findViewById(R.id.lvLibrary);
+        imgbtn = (ImageButton) view.findViewById(R.id.mdi_arrow_l);
         arrayBook = new ArrayList<>();
 
         arrayBook.add(new Book("OPEN BLIND EYES","RACHEL TIMOTHY",R.drawable.novel6,298,"24/11/2020",75));
