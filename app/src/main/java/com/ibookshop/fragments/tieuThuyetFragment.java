@@ -52,7 +52,7 @@ public class tieuThuyetFragment extends Fragment {
                 ArrayList<Category> listcategory_2 = new ArrayList<>();
                 listcategory_2 = (ArrayList<Category>) listCategory;
                 ArrayList<Book> listbook_1 = new ArrayList<>();
-                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()){f
                     String tenSach = dataSnapshot.child("TenSach").getValue(String.class);
                     String tenTacGia = dataSnapshot.child("TenTacGia").getValue(String.class);
                     String imageurl = dataSnapshot.child("surl").getValue(String.class);
