@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Nền màu nâu -->
+    <item android:id="@android:id/background">
+        <shape
+            android:shape="oval">
+            <solid android:color="#B69E9E" />
+        </shape>
+    </item>
+    <!-- Thanh tiến trình màu vàng -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape
+                android:shape="ring"
+                android:useLevel="true">
+                <solid android:color="#FE8F0E" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

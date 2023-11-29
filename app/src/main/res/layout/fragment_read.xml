@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:id="@+id/rectangle_10"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentTop="true"
+        android:background="#F8FCFF"
+        android:elevation="20dp" />
+    <ImageButton
+        android:id="@+id/mdi_arrow_l"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/lui"
+        android:background="@android:color/transparent"
+        android:elevation="20dp"/>
+    <ImageButton
+        android:id="@+id/Search"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/search"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/Aa"
+        android:layout_marginRight="15dp"
+        android:elevation="20dp"
+        android:background="@android:color/transparent"
+        android:layout_alignParentTop="true"/>
+
+    <ImageButton
+        android:id="@+id/Aa"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="10dp"
+        android:elevation="20dp"
+        android:src="@drawable/aa_icon"
+        android:background="@android:color/transparent"/>
+    <ImageButton
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/icons8_star_32"
+        android:elevation="20dp"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="4dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="58dp"/>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bacham"
+        android:elevation="20dp"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rectangle_10">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"
+                android:text="OPEN BLIND EYES\nRachel Timothy\n
+        Copyright © 2020 by Rachel Timothy.
+   \nLibrary of Congress Control Number:
+    \n2020923346
+\nISBN:
+\nHardcover
+\n978-1-6641-4368-5
+\nSoftcover
+\n978-1-6641-4367-8
+\neBook
+\n978-1-6641-4375-3
+\nAll rights reserved. No part of this book may be reproduced or transmitted
+in any form or by any means, electronic or mechanical, including photocopying,
+recording, or by any information storage and retrieval system,
+without permission in writing from the copyright owner.
+Scripture quotations are from the ESV® Bible (The Holy Bible, English
+Standard Version®), copyright © 2001 by Crossway, a publishing ministry of
+Good News Publishers. Used by permission. All rights reserved.
+Any people depicted in stock imagery provided by Getty Images are models,
+and such images are being used for illustrative purposes only.
+\nCertain stock imagery © Getty Images.
+\nRev. date: 11/19/2020
+\nXlibris
+\n844-714-8691
+\nwww.Xlibris.com
+\n820768\nCONTENTS
+\nChapter 1
+\nChapter 2
+\nChapter 3
+\nChapter 4
+\nChapter 5
+\nChapter 6
+\nChapter 7
+\nChapter 8
+\nChapter 9
+\nChapter 10
+\nChapter 11
+\nChapter 12
+\nChapter 13
+\nChapter 14
+\nChapter 15
+\nCHAPTER 1
+  \n A story like this is not an easy one to write. Putting words to the events of my life has been something I’ve struggled with for years, but there is healing in the process (or so I’ve been told). So I write this for both you and me. I write this for you, to inform you of this other world that so many know nothing about. But also for me, to cleanse my soul of the dirt and garbage that lingers from my past.
+  My story isn’t all bad. In fact, some memories bring me so much joy that my heart literally bursts, and I can’t help but smile as I think back.
+  Growing up, I was a perfect balance of tough but soft. Face me with a challenge, and I would meet that challenge and more. I had to be tough if I wanted to hang with my two older brothers. However, there was also a soft side to me. I had a huge heart for people. It didn’t matter how they looked or smelled, or what they
+wore, or what they did, I tried to be kind to everyone. I never wanted anyone to hurt, and I wanted to make sure that they knew they were loved. Loved by me, but more importantly, by God.
+   I had a knack for seeing the good in every person I met. My heart was kind and thoughtful of how others might be feeling. It would be a constant battle in my mind. I could be sitting on my mom’s lap watching TV at night, and I would begin to wonder if my dad needs me to cuddle with him for a while, just so he knows I love him too. So most nights at home, I would go back and forth from one parent to the next, thinking I was making them both feel loved and happy. It was how my young mind worked. It also was one of the first signs that I was a people pleaser and was always thinking about how I could make others happy.
+  And we know that for those who love God all things work together for good, for those who are called according to His purpose.
+—Romans 8:28
+  Every aspect of my life—the good, the bad, the ugly—has been tied together to form who I am. It shows the “why” of God choosing to make me. To take a piece away would completely disassemble my being. Who I am. The core that provides"
+                android:textAlignment="center" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

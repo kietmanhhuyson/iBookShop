@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/baseline_home_24"
+            android:title="@string/menu_home"
+            />
+        <item
+            android:id="@+id/nav_tieuThuyet"
+            android:icon="@drawable/icon_menu_tieuthuyet"
+            android:title="@string/menu_tieuThuyet" />
+        <item
+            android:id="@+id/nav_vienTuong"
+            android:icon="@drawable/icon_menu_vientuong"
+            android:title="@string/menu_vienTuong" />
+
+        <item
+            android:id="@+id/nav_truyen"
+            android:icon="@drawable/icon_menu_truyen"
+            android:title="@string/menu_truyen" />
+
+        <item
+            android:id="@+id/nav_myBook"
+            android:icon="@drawable/ic_menu_book"
+            android:title="@string/menu_myBook" />
+    </group>
+</menu>

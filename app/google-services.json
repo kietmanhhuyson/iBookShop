@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "241836915813",
+    "project_id": "ibookshoppj",
+    "storage_bucket": "ibookshoppj.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:241836915813:android:927d1cbd6687337ae05a8c",
+        "android_client_info": {
+          "package_name": "com.ibookshop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4W6Zw1K2UzpaWspnsQjDbXlsAuM3a1Vc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

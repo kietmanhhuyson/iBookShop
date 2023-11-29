@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/cart"
+        android:icon="@drawable/shopping_cart"
+        android:title="Cart"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/more"
+        android:icon="@drawable/person"
+        android:title="More"
+        app:showAsAction="always"
+        >
+        <menu>
+            <item
+                android:id="@+id/log_out"
+                android:icon="@drawable/logout"
+                android:title="Đăng xuất"
+                app:showAsAction="ifRoom" />
+
+            <item
+                android:id="@+id/setting"
+                android:icon="@drawable/setting"
+                android:title="Cài đặt"
+                app:showAsAction="ifRoom" />
+
+            <item
+                android:id="@+id/profile"
+                android:icon="@drawable/personal"
+                android:title="Cá nhân"
+                app:showAsAction="ifRoom" />
+        </menu>
+    </item>
+</menu>

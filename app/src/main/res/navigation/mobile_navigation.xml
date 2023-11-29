@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.ibookshop.fragments.mainPageFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_tieuThuyet"
+        android:name="com.ibookshop.fragments.tieuThuyetFragment"
+        android:label="@string/menu_tieuThuyet"
+        tools:layout="@layout/fragment_tieu_thuyet" />
+
+    <fragment
+        android:id="@+id/nav_vienTuong"
+        android:name="com.ibookshop.fragments.vienTuongFragment"
+        android:label="@string/menu_vienTuong"
+        tools:layout="@layout/fragment_vien_tuong" />
+
+    <fragment
+        android:id="@+id/nav_truyen"
+        android:name="com.ibookshop.fragments.truyenFragment"
+        android:label="@string/menu_truyen"
+        tools:layout="@layout/fragment_truyen" />
+
+    <fragment
+        android:id="@+id/nav_myBook"
+        android:name="com.ibookshop.fragments.myBookFragment"
+        android:label="@string/menu_myBook"
+        tools:layout="@layout/fragment_my_book" />
+</navigation>
