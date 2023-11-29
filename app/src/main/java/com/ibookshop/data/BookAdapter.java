@@ -10,10 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.ibookshop.R;
-<<<<<<< HEAD
+
 import com.squareup.picasso.Picasso;
-=======
->>>>>>> d9258338d0c65c8d937aa1875528a4f9dd93031e
 
 import java.util.List;
 
@@ -36,11 +34,8 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
         if (book == null){
             return;
         }
-<<<<<<< HEAD
         String imageUrl = book.getUrlImage();
         Picasso.get().load(imageUrl).into(holder.imgBook);
-=======
->>>>>>> d9258338d0c65c8d937aa1875528a4f9dd93031e
         holder.imgBook.setImageResource(book.getHinh());
         holder.txtTacGia.setText(book.getTenTacGia());
         holder.txtSach.setText(book.getTenSach());

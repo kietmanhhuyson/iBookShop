@@ -28,10 +28,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
 
     public void setData(List<Category> list) {
         this.mListCategory = list;
-<<<<<<< HEAD
-=======
         notifyDataSetChanged();
->>>>>>> d9258338d0c65c8d937aa1875528a4f9dd93031e
     }
 
     @NonNull
