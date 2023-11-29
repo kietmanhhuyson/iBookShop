@@ -3,12 +3,16 @@ package com.ibookshop.data;
 public class Book {
     private String TenSach;
     private String TenTacGia;
+<<<<<<< HEAD
     private String urlImage;
+=======
+>>>>>>> d9258338d0c65c8d937aa1875528a4f9dd93031e
     private int Hinh;
     private int SoTrang;
     private String ngayPhatHanh;
     private int phantramDoc;
 
+<<<<<<< HEAD
     public Book(String tenSach, String tenTacGia, String urlImage) {
         TenSach = tenSach;
         TenTacGia = tenTacGia;
@@ -20,6 +24,8 @@ public class Book {
         TenTacGia = tenTacGia;
     }
 
+=======
+>>>>>>> d9258338d0c65c8d937aa1875528a4f9dd93031e
     public Book(String tenSach, String tenTacGia, int hinh) {
         TenSach = tenSach;
         TenTacGia = tenTacGia;
@@ -81,6 +87,7 @@ public class Book {
     public void setHinh(int hinh) {
         Hinh = hinh;
     }
+<<<<<<< HEAD
 
     public String getUrlImage() {
         return urlImage;
@@ -89,4 +96,6 @@ public class Book {
     public void setUrlImage(String urlImage) {
         this.urlImage = urlImage;
     }
+=======
+>>>>>>> d9258338d0c65c8d937aa1875528a4f9dd93031e
 }

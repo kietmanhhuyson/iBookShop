@@ -1,6 +1,9 @@
 plugins {
     id("com.android.application")
+<<<<<<< HEAD
     id("com.google.gms.google-services")
+=======
+>>>>>>> d9258338d0c65c8d937aa1875528a4f9dd93031e
 }
 
 android {
@@ -44,9 +47,15 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
     implementation("androidx.navigation:navigation-fragment:2.7.4")
     implementation("androidx.navigation:navigation-ui:2.7.4")
+<<<<<<< HEAD
     implementation("com.google.firebase:firebase-database:20.3.0")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation("com.squareup.picasso:picasso:2.8")
+=======
+    testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+>>>>>>> d9258338d0c65c8d937aa1875528a4f9dd93031e
 }
