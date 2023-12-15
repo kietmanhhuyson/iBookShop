@@ -7,6 +7,9 @@ import android.view.Menu;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.Firebase;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.ibookshop.R;
 import com.ibookshop.fragments.CartPageFragment;
 import com.ibookshop.fragments.myBookFragment;
@@ -14,6 +17,7 @@ import com.ibookshop.fragments.tieuThuyetFragment;
 import com.ibookshop.fragments.mainPageFragment;
 import com.ibookshop.fragments.truyenFragment;
 import com.ibookshop.fragments.vienTuongFragment;
+import com.ibookshop.utils.Utils;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -22,16 +26,23 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+import java.util.ArrayList;
+
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawerLayout;
+    private FirebaseAuth auth;
+    private FirebaseUser user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(com.ibookshop.R.layout.activity_main);
-
         Toolbar toolbar  = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        if(Utils.cartBooks==null) {
+            Utils.cartBooks = new ArrayList<>();
+        }
 
         drawerLayout = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -46,10 +57,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new mainPageFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_home);
         }
-
+        auth = FirebaseAuth.getInstance();
+        user = auth.getCurrentUser();
+        Utils.userEmail = user.getEmail().trim();
     }
+//    public void addToCart(BookHome book) {
+//        cartBooks.add(book);
+//        updateCartFragment();
+//    }
 
-    @Override
+//    private void updateCartFragment() {
+//        CartPageFragment cartFragment =new CartPageFragment();
+//
+//            cartFragment.updateCart(cartBooks);
+//    }
+        @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         if(id==R.id.nav_home) {
@@ -87,6 +109,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
         if(id==R.id.log_out)
         {
+            auth.signOut();
             Intent intent = new Intent(MainActivity.this,welcomePageActivity.class);
             startActivity(intent);
             finish();
@@ -94,8 +117,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if(id==R.id.setting)
             Toast.makeText(this, "Setting button selected", Toast.LENGTH_SHORT).show();
-        if(id==R.id.profile)
-            Toast.makeText(this, "Profile button selected", Toast.LENGTH_SHORT).show();
+        if(id==R.id.profile) {
+            Intent intent = new Intent(this,ProfileActivity.class);
+            startActivity(intent);
+            finish();
+        }
+
         if(id==R.id.cart)
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new CartPageFragment()).commit();
         return super.onOptionsItemSelected(item);

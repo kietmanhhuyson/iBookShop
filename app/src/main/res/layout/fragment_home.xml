@@ -4,36 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.mainPageFragment">>
+    tools:context=".fragments.mainPageFragment">
 
 
     <RelativeLayout
         android:id="@id/header"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
         <ImageButton
             android:layout_width="50dp"
             android:layout_height="41dp"
             android:src="@drawable/search"
             android:background="@drawable/bogocsearch"
-            android:layout_marginTop="120dp"
-            android:layout_marginStart="30dp"/>
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"/>
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_marginTop="120dp"
             android:layout_width="380dp"
             android:layout_height="41dp"
             android:layout_marginStart="79dp"
             android:layout_marginEnd="40dp"
+            android:layout_marginTop="30dp"
             android:id="@+id/name"
             android:hint="Search"
             android:background="#D5EFF1"/>
         <ImageButton
             android:layout_width="50dp"
             android:layout_height="41dp"
+            android:layout_marginTop="30dp"
             android:src="@drawable/microphone"
             android:background="@drawable/rounded_view"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="120dp"
+
             android:layout_marginEnd="25dp"/>
         <TextView
             android:layout_width="wrap_content"
@@ -42,14 +44,14 @@
             android:textStyle="bold"
             android:textSize="18dp"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="190dp"/>
+            android:layout_marginTop="80dp"/>
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/bacham"
             android:background="@color/white"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="190dp"
+            android:layout_marginTop="80dp"
             android:layout_marginEnd="20dp"/>
     </RelativeLayout>
     <LinearLayout
@@ -61,7 +63,6 @@
             android:id="@+id/rcv_category"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/header"
             />
     </LinearLayout>
 
@@ -189,19 +190,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:fontFamily=""
                 android:text="Khám phá"
                 android:textSize="13dp" />
         </LinearLayout>
         <LinearLayout
             android:layout_weight="1"
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_gravity="center"
             android:gravity="center_horizontal">
             <ImageButton
+                android:id="@+id/myBookbtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/sct"

@@ -14,4 +14,7 @@
     <color name="green">#37982E</color>
     <color name="red">#C71F1F</color>
     <color name="title_below_header">#EBDDCD</color>
+    <color name="ten_tac_gia">#5B5151</color>
+    <color name="gia_sach">#37982E</color>
+    <color name="ten_sach">#000000</color>
 </resources>

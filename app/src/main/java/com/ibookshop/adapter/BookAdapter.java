@@ -1,4 +1,4 @@
-package com.ibookshop.data;
+package com.ibookshop.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.ibookshop.R;
+import com.ibookshop.data.Book;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -32,6 +34,9 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
         if (book == null){
             return;
         }
+        String imageUrl = book.getUrlImage();
+        Picasso.get().invalidate(imageUrl);
+        Picasso.get().load(imageUrl).into(holder.imgBook);
         holder.imgBook.setImageResource(book.getHinh());
         holder.txtTacGia.setText(book.getTenTacGia());
         holder.txtSach.setText(book.getTenSach());

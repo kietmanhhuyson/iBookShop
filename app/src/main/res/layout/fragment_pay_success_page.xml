@@ -37,5 +37,14 @@
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/button"
         android:text="Trang chủ" />
+    <Button
+        android:id="@+id/btn_myHome"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/resulft_receipt"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/button"
+        android:text="Sách của tôi" />
 
 </LinearLayout>

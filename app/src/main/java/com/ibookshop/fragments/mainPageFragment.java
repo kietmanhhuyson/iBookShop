@@ -1,57 +1,64 @@
 package com.ibookshop.fragments;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.ibookshop.R;
-import com.ibookshop.data.Book;
-import com.ibookshop.data.Category;
-import com.ibookshop.data.CategoryAdapter;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.ibookshop.adapter.BookHomeAdapter;
+import com.ibookshop.data.BookHome;
 
 public class mainPageFragment extends Fragment {
-    private RecyclerView rcvCategory;
-    private CategoryAdapter categoryAdapter;
+
+    private FirebaseRecyclerOptions<BookHome> options;
+    private FirebaseRecyclerAdapter<BookHome, BookHomeAdapter.myBook> adapter;
+    private RecyclerView recyclerView;
+    DatabaseReference database;
+    private ImageButton btnmyBook;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        rcvCategory =view.findViewById(R.id.rcv_category);
-        categoryAdapter = new CategoryAdapter(getActivity());
+        btnmyBook = view.findViewById(R.id.myBookbtn);
+        recyclerView = view.findViewById(R.id.rcv_category);
+        database = FirebaseDatabase.getInstance().getReference().child("Books");
 
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(),RecyclerView.VERTICAL,false);
-        rcvCategory.setLayoutManager(linearLayoutManager);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false);
+        recyclerView.setLayoutManager(linearLayoutManager);
 
+        load();
 
-        categoryAdapter.setData(getListCategory());
-        rcvCategory.setAdapter(categoryAdapter);
+        adapter.startListening();
+        recyclerView.setAdapter(adapter);
 
-        return  view;
+        btnmyBook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new myBookFragment()).commit();
+            }
+        });
+
+        return view;
     }
 
-    private List<Category> getListCategory() {
-        List<Category> listCategory = new ArrayList<>();
+    public void load() {
+        options = new FirebaseRecyclerOptions.Builder<BookHome>()
+                .setQuery(database, BookHome.class)
+                .build();
 
-        List<Book> listBook_1 = new ArrayList<>();
-        listBook_1.add(new Book("THE TRIALS OF APOLLO","RICK RIORDAN",R.drawable.book1));
-        listBook_1.add(new Book("HARRY POTTER  &\n"+"SORCERER’S STONE","J.K ROWLING",R.drawable.book2));
-        listBook_1.add(new Book("THE GLASS HOTEL","EMILY ST.JOHN MANDEL",R.drawable.book3));
-        listBook_1.add(new Book("ROOM","EMMA DONOGHVE",R.drawable.book4));
-        listBook_1.add(new Book("OPEN BLIND EYES","RACHEL TIMOTHY",R.drawable.book5));
-
-        listCategory.add(new Category("",listBook_1));
-        return listCategory;
+        adapter = new BookHomeAdapter(options, getContext());
     }
-
-
 }

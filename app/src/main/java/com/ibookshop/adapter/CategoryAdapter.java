@@ -1,4 +1,4 @@
-package com.ibookshop.data;
+package com.ibookshop.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,36 +11,35 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.ibookshop.R;
+import com.ibookshop.data.Category;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder> {
     private Context mContext;
     private List<Category> mListCategory;
-    
+
     public CategoryAdapter(Context mContext) {
         this.mContext = mContext;
     }
-    public void setData(List<Category> list){
+
+    public void setData(List<Category> list) {
         this.mListCategory = list;
-        notifyDataSetChanged();
     }
 
     @NonNull
     @Override
     public CategoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_category,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_category, parent, false);
         return new CategoryViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull CategoryViewHolder holder, int position) {
         Category category = mListCategory.get(position);
-        if (category == null){
+        if (category == null) {
             return;
         }
-
 
 
         holder.txtNameCategory.setText(category.getNameCategory());
@@ -50,8 +49,6 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
         BookAdapter bookAdapter = new BookAdapter();
         bookAdapter.setData(category.getBooks());
         holder.rcvBook.setAdapter(bookAdapter);
-
-
 
 
     }
@@ -64,9 +61,10 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
         return 0;
     }
 
-    public class CategoryViewHolder extends RecyclerView.ViewHolder{
+    public class CategoryViewHolder extends RecyclerView.ViewHolder {
         private TextView txtNameCategory;
         private RecyclerView rcvBook;
+
         public CategoryViewHolder(@NonNull View itemView) {
             super(itemView);
             rcvBook = itemView.findViewById(R.id.rcv_book);

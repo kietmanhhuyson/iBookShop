@@ -73,22 +73,26 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="70dp">
+        android:layout_below="@+id/qmk"
+        android:layout_marginTop="50dp">
 
-        <ImageView
+        <ImageButton
+            android:id="@+id/fb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/gg"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
+            android:background="#D0E9EE"
+            app:backgroundTint="@null"
             android:src="@drawable/fb1"/>
-        <ImageView
+        <ImageButton
+            android:id="@+id/gg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:src="@drawable/insta"/>
+            android:layout_marginStart="40dp"
+            android:background="#D0E9EE"
+            app:backgroundTint="@null"
+            android:src="@drawable/gg"/>
+
+
     </LinearLayout>
 
 

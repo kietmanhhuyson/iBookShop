@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/Sotrang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alata"
+        android:text="330 trang "/>
+    <TextView
+        android:id="@+id/Ngonngu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alata"
+        android:text="Tiếng Anh "/>
+    <TextView
+        android:id="@+id/Phathanh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alata"
+        android:text="2016 - 2023"/>
+    <TextView
+        android:id="@+id/Theloai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/detail_content"
+        android:layout_marginRight="30dp"
+        android:layout_toRightOf="@+id/text_thelloai"
+        android:text="Tiểu thuyết thần thoại Hy Lạp, giả tưởng, phiểu lưu."
+        />
+    <TextView
+        android:id="@+id/Mota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mota"
+        android:text="The Trials of Apollo là một bộ phim phiêu lưu giả tưởng và tiểu thuyết viễn tưởng thần thoại được viết bởi tác giả người Mỹ Rick Riordan cùng nhau tạo thành phần tiếp theo của loạt phim Heroes of Olympus. Nó được đặt trong cùng một thế giới với những câu chuyện Riordan khác và các tài liệu tham khảo các nhân vật và diễn biến từ loạt phim trước đó."
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="30dp"
+        android:fontFamily="@font/alata"
+        android:textSize="12sp"
+        android:layout_marginLeft="30dp"
+
+        />
+</LinearLayout>

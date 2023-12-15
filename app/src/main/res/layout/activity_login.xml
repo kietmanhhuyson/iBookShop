@@ -35,35 +35,37 @@
         android:textStyle="bold" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/username"
+
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="210dp"
-        android:layout_marginEnd="20dp"
-        android:hint="Email">
+        android:layout_marginEnd="20dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:id="@+id/username"
+            android:hint="Email"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/password"
+
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="280dp"
         android:layout_marginEnd="20dp"
-        android:hint="Mật khẩu"
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:id="@+id/password"
+            android:hint="Mật khẩu"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -101,6 +103,12 @@
         android:layout_marginTop="340dp"
         android:text="Nhớ mật khẩu ?" />
 
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
     <Button
         android:id="@+id/qmk"
         android:layout_width="wrap_content"
@@ -108,34 +116,36 @@
         android:layout_marginStart="240dp"
         android:layout_marginTop="549dp"
         android:background="#fff"
+        android:textSize="13sp"
         android:text="Quên mật khẩu ?"
         android:textColor="@color/black"
         app:backgroundTint="@null" />
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
         android:layout_below="@+id/qmk"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp">
-        <ImageView
-            android:id="@+id/gg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/gg" />
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true">
 
-        <ImageView
+        <ImageButton
             android:id="@+id/fb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-
-            android:src="@drawable/fb1" />
-
-        <ImageView
+            android:background="@color/white"
+            app:backgroundTint="@null"
+            android:src="@drawable/fb1"/>
+        <ImageButton
+            android:id="@+id/gg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:src="@drawable/insta" />
+            android:layout_marginStart="40dp"
+            android:background="@color/white"
+            app:backgroundTint="@null"
+            android:src="@drawable/gg"/>
+
+
     </LinearLayout>
 
 
